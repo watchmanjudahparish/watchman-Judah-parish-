@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watchman Catholic Charismatic Renewal Movement | Judah Parish, Karimo</title>
+  <style>
+    :root {
+      --primary-blue: #0a2540;
+      --royal-blue: #1d4ed8;
+      --accent-blue: #3b82f6;
+      --soft-blue-bg: #f0f6ff;
+      --white: #ffffff;
+      --text-dark: #1e293b;
+      --text-muted: #475569;
+      --border-light: #dbeafe;
+      --whatsapp-green: #25d366;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--white);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    /* Navigation Bar */
+    header {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.9rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: var(--white);
+    }
+
+    .brand img {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--white);
+      background: var(--white);
+    }
+
+    .brand-text h1 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0.3px;
+    }
+
+    .brand-text span {
+      font-size: 0.85rem;
+      color: #93c5fd;
+      font-weight: 500;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #93c5fd;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--royal-blue) 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 5rem 1.5rem;
+    }
+
+    .hero-logo {
+      width: 115px;
+      height: 115px;
+      border-radius: 50%;
+      border: 4px solid var(--white);
+      background: var(--white);
+      margin-bottom: 1.5rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .hero h2 {
+      font-size: 2.3rem;
+      max-width: 850px;
+      margin: 0 auto 0.5rem;
+      line-height: 1.25;
+    }
+
+    .hero .parish-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 0.4rem 1.2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      margin-bottom: 1.25rem;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .hero .tagline {
+      font-size: 1.3rem;
+      font-style: italic;
+      color: #dbeafe;
+      max-width: 700px;
+      margin: 0 auto 1.75rem;
+    }
+
+    .hero .declaration {
+      max-width: 720px;
+      margin: 0 auto 2rem;
+      font-size: 1.05rem;
+      color: var(--white);
+      background: rgba(10, 37, 64, 0.45);
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      border-left: 4px solid #93c5fd;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background-color: var(--white);
+      color: var(--primary-blue);
+      padding: 0.85rem 2rem;
+      border-radius: 6px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Section Containers */
+    section {
+      padding: 4.5rem 1.5rem;
+    }
+
+    .bg-soft-blue {
+      background-color: var(--soft-blue-bg);
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-header h3 {
+      font-size: 2rem;
+      color: var(--primary-blue);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-header .underline {
+      width: 70px;
+      height: 4px;
+      background-color: var(--royal-blue);
+      margin: 0 auto 1rem;
+      border-radius: 2px;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* Days of Fellowship Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-top: 5px solid var(--royal-blue);
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 15px rgba(10, 37, 64, 0.06);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .service-day {
+      display: inline-block;
+      background-color: var(--soft-blue-bg);
+      color: var(--royal-blue);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      margin-bottom: 0.75rem;
+    }
+
+    .service-card h4 {
+      font-size: 1.4rem;
+      color: var(--primary-blue);
+      margin-bottom: 0.4rem;
+    }
+
+    .service-time {
+      font-weight: 700;
+      color: var(--royal-blue);
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    .service-card p {
+      color: var(--text-muted);
+      font-size: 0.96rem;
+    }
+
+    .service-sublist {
+      margin-top: 1rem;
+      padding-left: 1.2rem;
+      color: var(--text-dark);
+      font-size: 0.93rem;
+    }
+
+    .service-sublist li {
+      margin-bottom: 0.35rem;
+    }
+
+    /* Pastors Leadership Section */
+    .pastors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .leader-card {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+      box-shadow: 0 6px 20px rgba(10, 37, 64, 0.08);
+      text-align: center;
+    }
+
+    .leader-img-wrap {
+      width: 100%;
+      height: 360px;
+      background-color: #e2e8f0;
+      overflow: hidden;
+    }
+
+    .leader-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .leader-info {
+      padding: 1.5rem;
+    }
+
+    .leader-role {
+      display: inline-block;
+      background: var(--primary-blue);
+      color: var(--white);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 0.3rem 0.9rem;
+      border-radius: 50px;
+      margin-bottom: 0.6rem;
+    }
+
+    .leader-info h4 {
+      font-size: 1.3rem;
+      color: var(--primary-blue);
+    }
+
+    /* Church Ministries & Gallery Sections */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .unit-card {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(10, 37, 64, 0.06);
+      transition: transform 0.2s ease;
+    }
+
+    .unit-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .unit-photo-box {
+      width: 100%;
+      height: 240px;
+      background: linear-gradient(135deg, #e0ecff 0%, #f8fafc 100%);
+      border-bottom: 2px dashed #93c5fd;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .unit-photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .placeholder-label {
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--royal-blue);
+    }
+
+    .placeholder-label strong {
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .placeholder-label span {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .unit-details {
+      padding: 1.4rem;
+    }
+
+    .unit-details h4 {
+      color: var(--primary-blue);
+      font-size: 1.2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .unit-details p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    /* Church at Large Featured Banner */
+    .congregation-feature {
+      margin-top: 3rem;
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(10, 37, 64, 0.08);
+    }
+
+    .congregation-photo-box {
+      width: 100%;
+      height: 380px;
+      background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+      border-bottom: 2px dashed #93c5fd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .congregation-photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .congregation-caption {
+      padding: 1.75rem;
+      text-align: center;
+    }
+
+    .congregation-caption h4 {
+      font-size: 1.4rem;
+      color: var(--primary-blue);
+      margin-bottom: 0.4rem;
+    }
+
+    /* Location & Contact Box */
+    .location-box {
+      background: var(--primary-blue);
+      color: var(--white);
+      border-radius: 12px;
+      padding: 3rem 2rem;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .location-box h3 {
+      font-size: 1.9rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .location-address {
+      font-size: 1.15rem;
+      color: #bfdbfe;
+      margin-bottom: 0.75rem;
+      font-weight: 500;
+    }
+
+    .contact-slot {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px dashed #93c5fd;
+      border-radius: 8px;
+      padding: 1.25rem;
+      max-width: 520px;
+      margin: 1.5rem auto;
+    }
+
+    .contact-slot p {
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+      color: #e0f2fe;
+    }
+
+    .btn-whatsapp {
+      display: inline-block;
+      background-color: var(--whatsapp-green);
+      color: #062814;
+      font-weight: 700;
+      padding: 0.75rem 1.6rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: opacity 0.2s ease;
+    }
+
+    .btn-whatsapp:hover {
+      opacity: 0.9;
+    }
+
+    .location-tagline {
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--white);
+      margin-top: 1.25rem;
+    }
+
+    footer {
+      background-color: #06182c;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    footer strong {
+      color: var(--white);
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 1.75rem;
+      }
+      .nav-container {
+        justify-content: center;
+        text-align: center;
+      }
+      nav ul {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="#home" class="brand">
+        <img src="186860.jpg" alt="Watchman Catholic Charismatic Renewal Movement Logo" />
+        <div class="brand-text">
+          <h1>Watchman Catholic Charismatic Renewal Movement</h1>
+          <span>Judah Parish, Karimo</span>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#fellowship">Days of Fellowship</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+          <li><a href="#ministries">Church Units</a></li>
+          <li><a href="#location">Location &amp; Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <img src="186860.jpg" alt="Church Logo" class="hero-logo" />
+    <h2>Watchman Catholic Charismatic Renewal Movement</h2>
+    <div class="parish-badge">Judah Parish, Karimo</div>
+    <p class="tagline">"Come along with us and God will do the good."</p>
+    <div class="declaration">
+      Welcome to a sanctuary where <strong>God has put His Name, His Spirit, His Power, and His Word</strong>. Join our family in worship, deep scriptural truth, and life-transforming prayer.
+    </div>
+    <a href="#fellowship" class="btn-primary">Join Our Fellowship</a>
+  </section>
+
+  <!-- Days of Fellowship Section -->
+  <section id="fellowship" class="bg-soft-blue">
+    <div class="container">
+      <div class="section-header">
+        <h3>Our Days of Fellowship</h3>
+        <div class="underline"></div>
+        <p>Gather with us every week as we study the Word of God and experience His transforming power.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Sunday Light -->
+        <div class="service-card">
+          <div>
+            <span class="service-day">Every Sunday</span>
+            <h4>The Sunday Light</h4>
+            <div class="service-time">Time: 8:30 AM</div>
+            <p>Our vibrant weekly Sunday worship service divided into two enriching sections:</p>
+            <ul class="service-sublist">
+              <li><strong>Section 1 — Bible Discourse:</strong> Interactive examination and practical understanding of God's Word.</li>
+              <li><strong>Section 2 — The Sunday Light Message:</strong> Anointed preaching that illuminates your path for the week ahead.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tuesday Bible Study -->
+        <div class="service-card">
+          <div>
+            <span class="service-day">Every Tuesday</span>
+            <h4>Bible Study (Expository)</h4>
+            <div class="service-time">Midweek Word &amp; Teaching</div>
+            <p>A dedicated time of digging deep into the Word of God. Through verse-by-verse expository teaching, we gain spiritual understanding and nourishment by eating directly from His Word.</p>
+          </div>
+        </div>
+
+        <!-- Friday Charismatic Hour -->
+        <div class="service-card">
+          <div>
+            <span class="service-day">Every Friday</span>
+            <h4>The Charismatic Hour</h4>
+            <div class="service-time">Time: 6:00 PM</div>
+            <p>A dynamic atmosphere of prayer and revival where God changes situations around, turns stones into pillars, heals the sick, and transforms lives. Experience renewal, deliverance, and divine intervention.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pastoral Leadership Section -->
+  <section id="leadership">
+    <div class="container">
+      <div class="section-header">
+        <h3>Parish Leadership</h3>
+        <div class="underline"></div>
+        <p>Shepherding the flock at Judah Parish, Karimo with the Word and Spirit of God.</p>
+      </div>
+
+      <div class="pastors-grid">
+        <!-- Pastor -->
+        <div class="leader-card">
+          <div class="leader-img-wrap">
+            <img src="186858.jpg" alt="Parish Pastor" />
+          </div>
+          <div class="leader-info">
+            <span class="leader-role">Parish Pastor</span>
+            <h4>Watchman Judah Parish Pastor</h4>
+          </div>
+        </div>
+
+        <!-- Assistant Pastor -->
+        <div class="leader-card">
+          <div class="leader-img-wrap">
+            <img src="186859.jpg" alt="Assistant Pastor" />
+          </div>
+          <div class="leader-info">
+            <span class="leader-role">Assistant Pastor</span>
+            <h4>Watchman Judah Parish Assistant Pastor</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Church Units & Gallery Sections -->
+  <section id="ministries" class="bg-soft-blue">
+    <div class="container">
+      <div class="section-header">
+        <h3>Our Church Family &amp; Ministries</h3>
+        <div class="underline"></div>
+        <p>Every member and unit working together in unity to serve God and His people.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Ushers Section -->
+        <div class="unit-card">
+          <div class="unit-photo-box">
+            <img src="ushers.jpg" alt="Church Ushers" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+            <div class="placeholder-label" style="display:none;">
+              <strong>Ushers Photo Section</strong>
+              <span>Place image file as <code>ushers.jpg</code></span>
+            </div>
+          </div>
+          <div class="unit-details">
+            <h4>The Ushers</h4>
+            <p>Welcoming worshippers with warmth, order, and hospitality into God's presence.</p>
+          </div>
+        </div>
+
+        <!-- Choristers Section -->
+        <div class="unit-card">
+          <div class="unit-photo-box">
+            <img src="choristers.jpg" alt="Church Choristers" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+            <div class="placeholder-label" style="display:none;">
+              <strong>Choristers Photo Section</strong>
+              <span>Place image file as <code>choristers.jpg</code></span>
+            </div>
+          </div>
+          <div class="unit-details">
+            <h4>The Choristers</h4>
+            <p>Leading the congregation in heartfelt praise, hymns, and spirit-filled worship.</p>
+          </div>
+        </div>
+
+        <!-- Video Crew Members Section -->
+        <div class="unit-card">
+          <div class="unit-photo-box">
+            <img src="video-crew.jpg" alt="Video Crew Members" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+            <div class="placeholder-label" style="display:none;">
+              <strong>Video Crew Members Photo Section</strong>
+              <span>Place image file as <code>video-crew.jpg</code></span>
+            </div>
+          </div>
+          <div class="unit-details">
+            <h4>Video Crew Members</h4>
+            <p>Capturing and broadcasting the Word of God and service moments with excellence.</p>
+          </div>
+        </div>
+
+        <!-- Children Teachers Section -->
+        <div class="unit-card">
+          <div class="unit-photo-box">
+            <img src="children-teachers.jpg" alt="Children Teachers" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+            <div class="placeholder-label" style="display:none;">
+              <strong>Children Teachers Photo Section</strong>
+              <span>Place image file as <code>children-teachers.jpg</code></span>
+            </div>
+          </div>
+          <div class="unit-details">
+            <h4>Children Teachers</h4>
+            <p>Dedicated instructors nurturing our young ones in biblical truth and godly character.</p>
+          </div>
+        </div>
+
+        <!-- Children Church Section -->
+        <div class="unit-card">
+          <div class="unit-photo-box">
+            <img src="children-church.jpg" alt="Children Church" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+            <div class="placeholder-label" style="display:none;">
+              <strong>Children Church Photo Section</strong>
+              <span>Place image file as <code>children-church.jpg</code></span>
+            </div>
+          </div>
+          <div class="unit-details">
+            <h4>Children Church</h4>
+            <p>A joyful, safe, and faith-building environment tailored for our children to grow in Christ.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- The Church at Large Section -->
+      <div class="congregation-feature">
+        <div class="congregation-photo-box">
+          <img src="church-at-large.jpg" alt="The Church at Large" onerror="this.style.display='none'; this.nextElementSibling.st
